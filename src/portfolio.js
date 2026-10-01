@@ -4,6 +4,7 @@
 
 import emoji from "react-easy-emoji";
 import splashAnimation from "./assets/lottie/splashAnimation";
+import wordpressLogo from "./assets/images/wordpressLogo.svg";
 
 // Splash Screen
 
@@ -169,7 +170,7 @@ const workExperiences = {
     {
       role: "WordPress Developer",
       company: "Thomas Digital Web Design",
-      companylogo: require("./assets/images/wordpressLogo.svg"),
+      companylogo: wordpressLogo,
       date: "2024",
       desc: "Converted Figma designs into fully functional WordPress websites using a custom company theme, ACF Pro, and Gravity Forms.",
       descBullets: [
