@@ -15,8 +15,11 @@ export default function Projects() {
   const {isDark} = useContext(StyleContext);
 
   useEffect(() => {
+    if (!openSource.display) {
+      return;
+    }
     const getRepoData = () => {
-      fetch("/profile.json")
+      fetch("profile.json")
         .then(result => {
           if (result.ok) {
             return result.json();
