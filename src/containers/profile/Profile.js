@@ -1,5 +1,5 @@
 import React, {useState, useEffect, lazy, Suspense} from "react";
-import {openSource} from "../../portfolio";
+import {openSource, profile} from "../../portfolio";
 import Contact from "../contact/Contact";
 import Loading from "../loading/Loading";
 
@@ -7,6 +7,15 @@ const renderLoader = () => <Loading />;
 const GithubProfileCard = lazy(() =>
   import("../../components/githubProfileCard/GithubProfileCard")
 );
+
+const staticProfile = {
+  id: "profile",
+  name: profile.name,
+  bio: profile.bio,
+  location: profile.location,
+  avatarUrl: profile.avatarUrl
+};
+
 export default function Profile() {
   const [prof, setrepo] = useState([]);
   function setProfileFunction(array) {
@@ -16,7 +25,7 @@ export default function Profile() {
   useEffect(() => {
     if (openSource.showGithubProfile === "true") {
       const getProfileData = () => {
-        fetch("/profile.json")
+        fetch("profile.json")
           .then(result => {
             if (result.ok) {
               return result.json();
@@ -36,6 +45,15 @@ export default function Profile() {
       getProfileData();
     }
   }, []);
+
+  if (profile.display) {
+    return (
+      <Suspense fallback={renderLoader()}>
+        <GithubProfileCard prof={staticProfile} key={staticProfile.id} />
+      </Suspense>
+    );
+  }
+
   if (
     openSource.display &&
     openSource.showGithubProfile === "true" &&

@@ -169,7 +169,7 @@ const workExperiences = {
     {
       role: "WordPress Developer",
       company: "Thomas Digital Web Design",
-      companylogo: require("./assets/images/companyPlaceholder.svg"),
+      companylogo: require("./assets/images/wordpressLogo.svg"),
       date: "2024",
       desc: "Converted Figma designs into fully functional WordPress websites using a custom company theme, ACF Pro, and Gravity Forms.",
       descBullets: [
@@ -189,6 +189,15 @@ To know how to get github key look at readme.md */
 const openSource = {
   showGithubProfile: "false", // Set true or false to show Contact profile using Github, defaults to true
   display: false // Set false to hide this section, defaults to true
+};
+
+// Profile Section
+const profile = {
+  display: true, // Set false to fall back to the plain Contact section
+  name: "Ruve K. Mopon",
+  bio: "WordPress Developer and Virtual Assistant building responsive, client-friendly websites with PHP, ACF Pro, and custom themes.",
+  location: "La Trinidad, Philippines",
+  avatarUrl: require("./assets/images/profile.png")
 };
 
 // Some big projects you have worked on
@@ -238,50 +247,6 @@ const bigProjects = {
         {
           name: "Visit Website",
           url: "https://highlandnm.com"
-        }
-      ]
-    },
-    {
-      projectName: "Buildwell Health",
-      projectDesc:
-        "Mobile-responsive WordPress site with ACF Pro flexible layouts and Gravity Forms for form management.",
-      footerLink: [
-        {
-          name: "Visit Website",
-          url: "https://buildwellhealth.com"
-        }
-      ]
-    },
-    {
-      projectName: "LP Investment Management",
-      projectDesc:
-        "Mobile-responsive WordPress site with ACF Pro flexible layouts and Gravity Forms for form management.",
-      footerLink: [
-        {
-          name: "Visit Website",
-          url: "https://lpinvmgt.com"
-        }
-      ]
-    },
-    {
-      projectName: "Simple Path Capital",
-      projectDesc:
-        "Mobile-responsive WordPress site with ACF Pro flexible layouts and Gravity Forms for form management.",
-      footerLink: [
-        {
-          name: "Visit Website",
-          url: "https://simplepathcapital.com"
-        }
-      ]
-    },
-    {
-      projectName: "Singh Law Firm",
-      projectDesc:
-        "Mobile-responsive WordPress site with ACF Pro flexible layouts and Gravity Forms for form management.",
-      footerLink: [
-        {
-          name: "Visit Website",
-          url: "https://singhfirm.com"
         }
       ]
     }
@@ -371,6 +336,7 @@ export {
   techStack,
   workExperiences,
   openSource,
+  profile,
   bigProjects,
   achievementSection,
   blogSection,
